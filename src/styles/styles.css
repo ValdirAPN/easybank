@@ -1,0 +1,293 @@
+/*=== GLOBAL ===*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Dark-Blue: hsl(233, 26%, 24%);
+    --Lime-Green: hsl(136, 65%, 51%);
+    --Bright-Cyan: hsl(192, 70%, 51%);
+
+    --Grayish-Blue: hsl(233, 8%, 62%);
+    --Light-Grayish-Blue: hsl(220, 16%, 96%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --White: hsl(0, 0%, 100%);
+}
+
+@media(max-width: 1080px) {
+    html {
+        font-size: 93.75%;
+    }
+}
+
+@media(max-width: 720px) {
+    html {
+        font-size: 87.5%;
+    }
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
+
+    background: var(--Very-Light-Gray);
+
+}
+
+::selection { 
+    background: var(--Lime-Green);
+    color: #fff;
+    text-shadow:none
+ }
+
+/*=== HEADER ==*/
+
+header {
+    width: 100%;
+    height: 4rem;
+    background: var(--White);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8rem;
+
+    position: relative;
+    z-index: 100;
+}
+
+nav {
+    flex: 1;
+    max-width: 400px;
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+ul.nav-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 100%;
+}
+
+.nav-icons li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--Grayish-Blue);
+    
+    cursor: pointer;
+
+}
+
+.nav-icons li:hover {
+    margin-bottom: -4px;
+    border-bottom: 4px solid var(--Lime-Green);
+}
+
+button {
+    background-image: linear-gradient(to right, var(--Lime-Green), var(--Bright-Cyan));
+    color: var(--White);
+
+    height: 2.5rem;
+    width: 8rem;
+
+    border: none;
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+button:hover {
+    filter:opacity(0.7);
+}
+
+/*=== MAIN ===*/
+
+.main-image {
+    position: absolute;
+    
+}
+
+.pattern {
+    width: 1080px;
+    top: -160px;
+    right: -350px;
+}
+
+.mockup {
+    z-index: 2;
+
+    width: 700px;
+    top: -40px;
+    right: -116px;
+}
+
+main {
+    height: 590px;
+
+    display: flex;
+    align-items: center;
+    padding-left: 8rem;
+}
+
+main div.main-content {
+    width: 400px;
+}
+
+div.main-content h1 {
+    font-weight: 300;
+    font-size: 3rem;
+    color: var(--Dark-Blue);
+}
+
+div.main-content p {
+    color: var(--Grayish-Blue);
+    line-height: 1.5rem;
+
+    margin: 2rem 0;
+}
+
+/*=== WHY CHOOSE EASYBANK? ===*/
+
+section#why-choose {
+    background: var(--Light-Grayish-Blue);
+    padding: 5rem 8rem;
+}
+
+.section-title{
+    font-weight: 400;
+    font-size: 2.2rem;
+
+    color: var(--Dark-Blue);
+
+    margin-bottom: 2rem;
+}
+
+div.section-header p{
+    color: var(--Grayish-Blue);
+    line-height: 1.5rem;
+
+    margin-bottom: 4rem;
+}
+
+div.pros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
+    align-items: flex-start;
+}
+
+section#latest-articles {
+    padding: 5rem 8rem;
+}
+
+div.card h4{
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: var(--Dark-Blue);
+
+    margin: 2rem 0;
+}
+
+div.card p{
+    color: var(--Grayish-Blue);
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 26px;
+}
+
+.article.card {
+    background: var(--White);
+    border-radius: 6px;
+
+}
+
+.card-content {
+    padding: 26px;
+}
+
+.card-content .author {
+    font-size: 0.8rem;
+    color: var(--Grayish-Blue);
+}
+
+.card-content h5 {
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: var(--Dark-Blue);
+
+    margin: 0.8rem 0;
+}
+
+.image-container {
+    width: 100%;
+    height: 200px;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px 6px 0 0;
+
+}
+
+/*=== FOOTER ===*/
+
+footer {
+    background: var(--Dark-Blue);
+    padding: 2rem 8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--White);
+    font-size: 0.9rem;
+
+}
+
+footer .left .social-media img {
+    margin-top: 2rem;
+    margin-right: 0.4rem;
+}
+
+footer .middle {
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .middle ul {
+    line-height: 1.8rem;
+}
+
+footer .right {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+footer .right button {
+    margin-bottom: 1.2rem;
+}
