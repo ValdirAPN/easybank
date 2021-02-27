@@ -124,15 +124,15 @@ button:hover {
 }
 
 .pattern {
-    width: 1080px;
-    top: -160px;
-    right: -350px;
+    max-width: min(70vw, 1080px);
+    top: -10vh;
+    right: -10vw;
 }
 
 .mockup {
     z-index: 2;
 
-    width: 700px;
+    max-width: min(70vw, 700px);
     top: -40px;
     right: -116px;
 }
@@ -291,3 +291,5 @@ footer .right {
 footer .right button {
     margin-bottom: 1.2rem;
 }
+
+/*=== MEDIA QUERYS ===*/
